@@ -1,0 +1,25 @@
+<view class="list" wx:if="{{rank.totalRank}}">
+  <view bindtap="chooseList" data-index="{{0}}" class="item">
+    <view class="weekList {{listFlag===0?'font':''}}">周榜</view>
+  </view>
+  <view bindtap="chooseList" data-index="{{1}}" class="item">
+    <view class="monthList {{listFlag===1?'font':''}}">月榜</view>
+  </view>
+  <view bindtap="chooseList" data-index="{{2}}" class="item">
+    <view class="allList {{listFlag===2?'font':''}}">总榜</view>
+  </view>
+</view>
+
+
+<view class="showData">
+  <view class="item" wx:for="{{books}}" wx:key="{{index}}" bindtap="toDetails" data-id="{{item._id}}" data-title="{{item.title}}">
+    <view class="img">
+      <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+    </view>
+    <view class="text">
+      <view class="title">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="shortIntro">{{item.shortIntro}}</view>
+    </view>
+  </view>
+</view>

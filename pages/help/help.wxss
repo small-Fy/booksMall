@@ -1,0 +1,19 @@
+.help{
+  padding: 20rpx 30rpx;
+}
+.help .titleAll{
+  font-size: 46rpx;
+  font-weight: 700
+}
+.help .title{
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  color:#333;
+}
+.help .inner{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  text-indent: 2em;
+  color: #666;
+  line-height: 60rpx;
+}

@@ -1,0 +1,30 @@
+.ranking{
+  padding: 20rpx
+}
+.ranking .title{
+  font-size: 30rpx
+}
+.ranking .inner{
+  margin: 30rpx 0 0 20rpx;
+}
+.ranking .inner .item{
+  margin: 40rpx 0;
+  
+}
+.ranking .inner .item .interception{
+    display: flex
+}
+.ranking .inner .item .img{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right:40rpx
+}
+.ranking .inner .item .img image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.ranking .inner .item .title{
+  line-height: 64rpx;
+  font-size: 36rpx
+}

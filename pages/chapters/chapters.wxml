@@ -1,0 +1,15 @@
+<import src="../../lib/wxParse/wxParse.wxml" />
+
+
+<view class="chapterth">
+  <view>{{chapterTitle}}</view>
+</view>
+
+<view class="inner">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<view class="btn">
+  <view class="last" bindtap="last">上一章</view>
+  <view class="next" bindtap="next">下一章</view>
+</view>

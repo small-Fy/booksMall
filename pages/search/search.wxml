@@ -1,0 +1,62 @@
+<view class="mask"></view>
+<view class="search">
+  <view class="icon" wx:if="{{iptDel}}">
+    <image src="../../images/search.png"></image>
+  </view>
+  <view class="input">
+    <input placeholder="输入书名或作者名" bindinput="input"  bindconfirm="confirm" value="{{keyWord}}"></input>
+  </view>
+  <view class="icon delete" wx:if="{{!iptDel}}" bindtap="delete">
+    <image src="../../images/input_delete.png"></image>
+  </view>
+</view>
+
+<view class="hotWords" wx:if="{{bkSh}}">
+  <view class="top">
+    <view class="text">大家都在搜</view>
+    <view class="change" bindtap="update">
+      <view class="img">
+        <image src="../../images/update.png"></image>
+      </view>
+      <view class="word">换一换</view>
+    </view>
+  </view>
+  <view class="showData" wx:if="{{bkSh}}">
+    <view class="item" style="background-color:{{item.bgcolor}}" wx:for="{{showHotWords}}" wx:key="{{index}}" bindtap="setValue" data-word="{{item.word}}">
+      {{item.word}}
+    </view>
+  </view>
+</view>
+
+<view class="searchHistory" wx:if="{{bkSh}}">
+  <view class="top">
+    <view class="text">搜索历史</view>
+    <view class="change" bindtap="delete">
+      <view class="img">
+        <image src="../../images/delete.png"></image>
+      </view>
+      <view class="word" bindtap="empty">清空</view>
+    </view>
+  </view>
+  <view class="showData" wx:if="{{bkSh}}">
+    <view class="item" wx:for="{{history}}" wx:key="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</view>
+
+<view class="books" wx:if="{{!bkSh}}">
+  <view class="item" wx:for="{{books}}" wx:key="{{index}}" bindtap="toDetails" data-id="{{item._id}}" data-title="{{item.title}}">
+    <view class="img">
+      <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+    </view>
+    <view class="text">
+      <view class="title">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="shortIntro">{{item.shortIntro}}</view>
+      <view class="tags">
+        最近收藏：{{item.latelyFollower}}
+      </view>
+    </view>
+  </view>
+</view>

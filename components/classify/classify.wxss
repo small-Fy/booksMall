@@ -1,0 +1,33 @@
+.classify{
+  padding: 20rpx;
+}
+.classify .plate{
+  margin-top: 30rpx
+}
+.classify .plate .title{
+    font-size: 30rpx
+}
+.classify .plate .inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx
+}
+.classify .plate .inner .item{
+  width: 33%;
+  text-align: center;
+  border-right: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx 0
+}
+.classify .plate .inner .item .name{
+  font-weight: 700;
+  font-size: 36rpx
+}
+.classify .plate .inner .item .bookCount{
+  font-size: 34rpx;
+  color: #666;
+  margin-top: 16rpx
+}
+.classify .plate .inner .border{
+  border-right: 0
+}

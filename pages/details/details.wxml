@@ -1,0 +1,99 @@
+<view class="all">
+  <view class="top"></view>
+  <view class="bottom"></view>
+  <view class="img" bindtap="showMask">
+    <image src="{{'https://statics.zhuishushenqi.com'+details.cover}}"></image>
+  </view>
+</view>
+
+<view class="inner">
+  <view class="title">{{details.title}}</view>
+  <view class="author">{{details.author}}</view>
+  <view class="btn">
+    <view class="start {{flag===0?'font':''}}" bindtap="startRead" data-flag="{{0}}" data-title="{{details.title}}">开始阅读</view>
+    <view class="addMall" bindtap="addMall" data-flag="{{1}}" wx:if="{{flag===0}}">加入书架</view>
+    <view class="addMall {{flag===1?'font':''}}" bindtap="deleteMall" data-flag="{{0}}" wx:if="{{flag===1}}">已加入书架</view>
+  </view>
+  <view class="star">
+    <view wx:for="{{score}}" class="shing" wx:key="index">
+      <image src="../../images/star-shing.png"></image>
+    </view>
+    <view wx:for="{{5-score}}" class="gray" wx:key="index">
+      <image src="../../images/star-gray.png"></image>
+    </view>
+  </view>
+  <view class="lastChapter">
+    更新至
+    <text>【{{details.lastChapter}}】</text>
+  </view>
+</view>
+
+<view class="choose">
+  <view bindtap="choose" data-item="{{true}}" class="item">
+    <view class="bg {{chooseFlag ? 'fonts' : ''}}">详情</view>
+  </view>
+  <view bindtap="choose" data-item="{{false}}" class="item">
+    <view class="bg {{chooseFlag ? '' : 'fonts'}}">
+      评价
+      <text class="count">（{{evaluationNum}}）</text>
+    </view>
+  </view>
+</view>
+
+<view class="show">
+  <view class="details" wx:if="{{chooseFlag}}">
+    <scroll-view scroll-y="true" class="box">
+      <view class="text">{{details.longIntro}}</view>
+    </scroll-view>
+  </view>
+  <view class="evaluation" wx:else>
+    <view class="item" wx:for="{{docs}}" wx:key="index">
+      <view class="avatar">
+        <image src="{{'https://statics.zhuishushenqi.com'+item.author.avatar}}"></image>
+      </view>
+      <view class="information">
+        <view class="nickname">{{item.author.nickname}}</view>
+        <view class="content">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="directory" bindtap="toDirectory" data-title="{{details.title}}">
+  <view class="img">
+    <image src="../../images/directory.png"></image>
+  </view>
+  <view class="text">
+    总目录（{{details.chaptersCount}}）
+  </view>
+</view>
+
+<view class="recommended">
+  <view class="top">
+    <view class="text">看过这本书的还看过</view>
+    <view class="change" bindtap="update">
+      <view class="img">
+        <image src="../../images/update.png"></image>
+      </view>
+      <view class="word">换一换</view>
+    </view>
+  </view>
+  <view class="relatedRecommendedBooks">
+    <view class="item" wx:for="{{showBook}}" wx:key="index">
+      <view class="img">
+        <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+      </view>
+      <view class="word">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="mask" wx:if="{{maskFlag}}" bindtap="showMask"></view>
+
+<view class="modalDlg" wx:if="{{maskFlag}}">
+  <view class="photo" bindlongpress="commit">
+    <view class="img">
+      <image canvas-id="aha" src="{{'https://statics.zhuishushenqi.com'+details.cover}}"></image>
+    </view>
+  </view>
+</view>

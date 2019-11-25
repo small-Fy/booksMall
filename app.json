@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookMall/bookMall",
+    "pages/search/search",
+    "pages/help/help",
+    "pages/books/books",
+    "pages/specificRanking/specificRanking",
+    "pages/details/details",
+    "pages/chapters/chapters",
+    "pages/directory/directory"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cb1c36",
+    "navigationBarTitleText": "啊哈书城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#cb1c36",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "书架",
+      "iconPath": "images/bookmall-now.png",
+      "selectedIconPath": "images/bookmall-pass.png"
+    },
+    {
+      "pagePath": "pages/bookMall/bookMall",
+      "text": "书城",
+      "iconPath": "images/bookcity-now.png",
+      "selectedIconPath": "images/bookcity-pass.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "images/search-now.png",
+      "selectedIconPath": "images/search-pass.png"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

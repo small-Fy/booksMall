@@ -1,0 +1,32 @@
+<view class="bookmall">
+  <view class="navTop">
+    <view class="left" wx:if="{{library.length<0}}">
+      <image src="../../images/selected.png"></image>
+    </view>
+    <view class="left" wx:else>
+      <image src="../../images/edit.png" bindtap="edit"></image>
+    </view>
+    <view class="right">
+      <view class="help" bindtap="goHelp">帮助</view>
+      <view class="refresh">
+        <image src="../../images/refresh.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="inner" wx:if="{{library.length<0}}">
+    <view class="none">主人还没收藏书籍，快去收藏吧！！！</view>
+  </view>
+  <view wx:else class="books">
+    <view class="item" wx:for="{{library}}" wx:key="index" bindtap="toChapters" data-details="{{item}}">
+      <view class="img">
+        <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="nowChapter">读到第{{item.nowChapter+1}}章</view>
+      <view class="delete" wx:if="{{deleteFlag}}" catchtap="deleteMall" data-item="{{item}}">
+        <image src="../../images/delete_mall.png"></image>
+      </view>
+      <view class="updated" wx:if="{{library.updateFlag}}">有更新</view>
+    </view>
+  </view>
+</view>

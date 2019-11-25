@@ -1,0 +1,24 @@
+<view class="ranking">
+  <view class="title">男生</view>
+  <view class="inner">
+    <view class="item" wx:for="{{rank.male}}" wx:key="index" bindtap="showRank" data-rank="{{item}}">
+      <view class="interception" wx:if="{{index<6}}">
+        <view class="img">
+          <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+        </view>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="title">女生</view>
+  <view class="inner">
+    <view class="item" wx:for="{{rank.female}}" wx:key="index" bindtap="showRank" data-rank="{{item}}">
+      <view class="interception" wx:if="{{index<6}}">
+        <view class="img">
+          <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+        </view>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</view>

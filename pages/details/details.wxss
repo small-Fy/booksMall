@@ -1,0 +1,302 @@
+.all {
+  position: relative;
+}
+
+.all .top {
+  width: 100%;
+  height: 200rpx;
+  background-color: #cb1c36;
+}
+
+.all .bottom {
+  width: 100%;
+  height: 300rpx;
+}
+
+.all .img {
+  width: 300rpx;
+  height: 420rpx;
+  position: absolute;
+  left: 30%;
+  top: 30rpx;
+}
+
+.all .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.inner .title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40rpx;
+}
+
+.inner .author {
+  text-align: center;
+  color: #666;
+  margin-top: 30rpx;
+}
+
+.inner .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.inner .btn .start {
+  color: #333;
+  padding: 20rpx 40rpx;
+}
+
+.inner .btn .addMall {
+  color: #333;
+  padding: 20rpx 40rpx;
+  margin-left: 60rpx;
+}
+
+.inner .btn .font {
+  background-color: red;
+  color: white;
+  border-radius: 16rpx;
+}
+
+.inner .star {
+  display: flex;
+  justify-content: center;
+  margin: 30rpx 0;
+}
+
+.inner .star .shing {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+
+.inner .star .shing image {
+  width: 100%;
+  height: 100%;
+}
+
+.inner .star .gray {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+
+.inner .star .gray image {
+  width: 100%;
+  height: 100%;
+}
+
+.inner .lastChapter {
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.inner .lastChapter text {
+  color: #40e0d7;
+}
+
+.choose {
+  display: flex;
+  margin-top: 40rpx;
+}
+
+.choose .item {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+}
+
+.choose .item .bg {
+  color: #333;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.choose .item .fonts {
+  color: red;
+  padding-bottom: 10rpx;
+  border-bottom: 2px solid red;
+}
+
+.choose .item .count {
+  color: #333;
+  font-size: 24rpx;
+  line-height: 54rpx;
+}
+
+.show {
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.show .details .box {
+  height: 300rpx;
+  margin-top: 40rpx;
+}
+
+.show .details .box .text {
+  font-size: 34rpx;
+  line-height: 50rpx;
+  color: #333;
+  text-indent: 2em;
+}
+
+.show .evaluation {
+  margin-top: 40rpx;
+}
+
+.show .evaluation .item {
+  margin-bottom: 30rpx;
+  display: flex;
+}
+
+.show .evaluation .item .avatar {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.show .evaluation .item .avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.show .evaluation .item .information {
+  margin-left: 40rpx;
+  width: 500rpx;
+}
+
+.show .evaluation .item .information .nickname {
+  color: crimson;
+  font-size: 32rpx;
+}
+
+.show .evaluation .item .information .content {
+  color: #333;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.directory {
+  width: 320rpx;
+  margin: 0 auto;
+  display: flex;
+}
+
+.directory .img {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.directory .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.directory .itextmg {
+  font-size: 34rpx;
+  color: #666;
+  line-height: 36rpx;
+}
+
+.recommended {
+  margin: 60rpx 0;
+  padding: 0 30rpx;
+}
+
+.recommended .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommended .top .text {
+  font-size: 36rpx;
+}
+
+.recommended .top .change {
+  display: flex;
+}
+
+.recommended .top .change .img {
+  width: 36rpx;
+  height: 36rpx;
+  color: crimson;
+}
+
+.recommended .top .change .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.recommended .top .change .word {
+  line-height: 36rpx;
+  color: #d81e06;
+}
+
+.recommended .relatedRecommendedBooks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommended .relatedRecommendedBooks .item {
+  margin-top: 40rpx;
+}
+
+.recommended .relatedRecommendedBooks .item .img {
+  width: 210rpx;
+  height: 320rpx;
+}
+
+.recommended .relatedRecommendedBooks .item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.recommended .relatedRecommendedBooks .item .word {
+  text-align: center;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+.modalDlg{
+    width: 580rpx;
+    height: 620rpx;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 9999;
+    margin: -370rpx 85rpx;
+    background-color: #fff;
+    border-radius: 36rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalDlg .photo{
+  position: fixed;
+  top:27%;
+  left: 27%;
+  width: 50%;
+  height: 50%;
+}
+.modalDlg .photo .img{
+  width: 100%;
+  height: 80%;
+}
+.modalDlg .photo .img image{
+  width: 100%;
+  height: 100%;
+}

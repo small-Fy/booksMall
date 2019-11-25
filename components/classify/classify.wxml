@@ -1,0 +1,14 @@
+<view class="classify">
+  <view class="plate">
+    <view class="title">男生</view>
+    <plate arr="{{book.male}}" plateName="male"></plate>
+  </view>
+  <view class="plate">
+    <view class="title">女生</view>
+    <plate arr="{{book.female}}" plateName="female"></plate>
+  </view>
+  <view class="plate">
+    <view class="title">出版</view>
+    <plate arr="{{book.press}}" plateName="press"></plate>
+  </view>
+</view>

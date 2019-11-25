@@ -1,0 +1,35 @@
+<view class="fixed">
+  <view class="rankType">
+    <view class="item" wx:for="{{typeList}}" wx:key="{{index}}">
+      <view class="default {{typeListIndex ===index  ? 'font' : ''}}" bindtap="chooseIndex" data-index="{{index}}"> {{item.name}}</view>
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class="categories">
+    <view class="item" wx:for="{{mins}}" wx:key="{{index}}">
+      <view class="default {{minorIndex ===index  ? 'font' : ''}}" bindtap="chooseMinorIndex" data-index="{{index}}"> {{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="showData">
+  <view class="item" wx:for="{{showData}}" wx:key="{{index}}" bindtap="toDetails" data-id="{{item._id}}" data-title="{{item.title}}">
+    <view class="img">
+      <image src="{{'https://statics.zhuishushenqi.com'+item.cover}}"></image>
+    </view>
+    <view class="text">
+      <view class="title">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="shortIntro">{{item.shortIntro}}</view>
+      <view class="tags">
+        <view class="tag" wx:for="{{item.tags}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{idx}}">
+          <view class="interception {{idx===1?'interception1':''}} {{idx===2?'interception2':''}}" wx:if="{{idx<3}}">
+            {{itemName}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom" wx:if="{{bottomFlag}}">已经没有数据咯</view>

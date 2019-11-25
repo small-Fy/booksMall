@@ -1,0 +1,102 @@
+.list{
+  display: flex
+}
+.list .item{
+  flex: 1;
+  text-align: center;
+  font-weight: 700
+}
+.list .item .weekList,.monthList,.allList{
+  margin: 0 auto;
+}
+.list .item .weekList,.monthList,.allList view{
+  width: 80rpx;
+}
+.list .item .font{
+  color: red;
+  padding-bottom: 20rpx;
+  border-bottom: 4rpx solid red
+}
+
+
+
+.showData {
+  padding: 40rpx 20rpx
+}
+
+.showData .item {
+  display: flex;
+  margin-bottom: 40rpx
+}
+
+.showData .item .img {
+  width: 270rpx;
+  height: 420rpx;
+}
+
+.showData .item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.showData .item .text {
+  width: 380rpx;
+  color: #666;
+  margin-left: 30rpx;
+  position: relative
+}
+
+.showData .item .text .title {
+  font-weight: 700;
+  font-size: 40rpx;
+  color: black;
+  margin-bottom: 30rpx
+}
+
+.showData .item .text .author {
+  width: 420rpx;
+  font-size: 32rpx;
+  margin-bottom: 30rpx
+}
+
+.showData .item .text .shortIntro {
+  width: 420rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.showData .item .text .tags {
+  display: flex;
+  position: absolute;
+  bottom: 0
+}
+.showData .item .text .tags .tag{
+  display: flex;
+  color: white;
+  font-size: 26rpx;
+  text-align: center;
+  /* width: 120rpx */
+}
+.showData .item .text .tags .tag .interception{
+  background-color:#ff8c00;
+  width: 110rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 16rpx
+}
+.showData .item .text .tags .tag .interception1{
+  background-color:#00ced1;
+  width: 110rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 16rpx;
+  margin: 0 10rpx
+}
+.showData .item .text .tags .tag .interception2{
+  background-color:#ff4500;
+  width: 110rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 16rpx
+}

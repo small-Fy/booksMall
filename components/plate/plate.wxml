@@ -1,0 +1,6 @@
+<view class="inner">
+  <view wx:for="{{arr}}" wx:key="index" class="item {{(index+1)%3===0 ? 'border' : ''}}" bindtap="showRank" data-name="{{item.name}}"data-plateName="{{plateName}}">
+    <view class="name">{{item.name}}</view>
+    <view class="bookCount">{{item.bookCount}}本</view>
+  </view>
+</view>

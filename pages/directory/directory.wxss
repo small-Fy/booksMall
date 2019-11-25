@@ -1,0 +1,31 @@
+.chapters{
+  padding: 20rpx;
+  height: 1140rpx
+}
+
+.chapters .item{
+  padding: 10rpx;
+  color: #333
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  bottom: 40rpx;
+  left: 25%
+}
+
+.btn .last {
+  padding: 20rpx 40rpx;
+  margin-right: 16rpx;
+  background-color: crimson;
+  border-radius: 30rpx 0 0 30rpx;
+}
+
+.btn .next {
+  padding: 20rpx 40rpx;
+  background-color: crimson;
+  border-radius: 0 30rpx 30rpx 0;
+}

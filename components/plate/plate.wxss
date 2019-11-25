@@ -1,0 +1,24 @@
+.inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx
+}
+.inner .item{
+  width: 33%;
+  text-align: center;
+  border-right: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx 0
+}
+.inner .item .name{
+  font-weight: 700;
+  font-size: 36rpx
+}
+.inner .item .bookCount{
+  font-size: 34rpx;
+  color: #666;
+  margin-top: 16rpx
+}
+.inner .border{
+  border-right: 0
+}

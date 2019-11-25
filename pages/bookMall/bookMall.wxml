@@ -1,0 +1,12 @@
+<view class="bookmall">
+  <view class="choose">
+    <view bindtap="choose" data-item="{{true}}" class="item">
+          <view class="bg {{chooseFlag ? 'font' : ''}}">分类</view>
+    </view>
+    <view bindtap="choose" data-item="{{false}}" class="item">
+          <view class="bg {{chooseFlag ? '' : 'font'}}">排行</view>
+    </view>
+  </view>
+<classify wx:if="{{chooseFlag}}" book="{{book}}"></classify>
+<ranking wx:else rank="{{rank}}"></ranking>
+</view>

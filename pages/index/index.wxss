@@ -1,0 +1,84 @@
+.bookmall .navTop{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 50rpx;
+}
+.bookmall .navTop .left{
+    width: 70rpx;
+    height:70rpx
+}
+.bookmall .navTop .left image{
+  width: 70rpx;
+  height:70rpx;
+}
+.bookmall .navTop .right{
+  display: flex;
+}
+.bookmall .navTop .right .help{
+  border: 1px solid #333;
+  border-radius: 20rpx;
+  padding: 8rpx 20rpx;
+  margin-right: 20rpx;
+}
+.bookmall .navTop .right .refresh image{
+  width: 70rpx;
+  height:70rpx;
+}
+.bookmall .books{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  margin-top: 40rpx
+}
+.bookmall .books .item{
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  position: relative
+}
+.bookmall .books .item .img{
+  width: 210rpx;
+  height: 340rpx;
+}
+.bookmall .books .item .img image{
+  width: 100%;
+  height: 100%;
+}
+.bookmall .books .item .title{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333
+}
+.bookmall .books .item .nowChapter{
+  text-align: center;
+  font-size: 28rpx;
+  color: #333
+}
+.bookmall .books .item .delete{
+  width: 60rpx;
+  height:60rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  z-index: 100
+}
+.bookmall .books .item .delete image{
+  width: 100%;
+  height:100%;
+}
+.bookmall .books .item .updated{
+  color: white;
+  background-color: crimson;
+  padding: 8rpx 6rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  z-index: 99
+}
+.inner{
+  margin-top: 100rpx;
+}
+.inner .none{
+  text-align: center;
+  font-size: 28rpx;
+}
